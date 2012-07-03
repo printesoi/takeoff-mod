@@ -27,10 +27,16 @@
 #include "search/SearchWidget.h"
 #include "../model/config/Config.h"
 
-#include <kdebug.h>
 using namespace Takeoff;
 using namespace TakeoffPrivate;
 using namespace Plasma;
+
+#define IS_ARROW_OR_RETURN(x) ((x) == Qt::Key_Up \
+                               || (x) == Qt::Key_Down \
+                               || (x) == Qt::Key_Left \
+                               || (x) == Qt::Key_Right \
+                               || (x) == Qt::Key_Enter \
+                               || (x) == Qt::Key_Return)
 
 // ************************************************************************** //
 // **********              CONSTRUCTORS AND DESTRUCTOR             ********** //
@@ -105,41 +111,30 @@ void TakeoffWidget::reset()
 
 void TakeoffWidget::keyPressEvent(QKeyEvent *event)
 {
-    kDebug() << event->key();
     if (event->key() == Qt::Key_Tab)
     {
+        // Switch to the next tab when CTRL + TAB is hit
         int currIdx = this->menuWidget->currentIndex();
         int nextIdx = currIdx + 1 == this->menuWidget->tabCount() ? 0 : currIdx + 1;
         this->menuWidget->setCurrentIndex(nextIdx);
     }
     else if (event->key() == Qt::Key_Backtab)
     {
+        // Switch to previous tab when CTRL + Shift + TAB is hit
         int currIdx = this->menuWidget->currentIndex();
         int nextIdx = currIdx ? currIdx - 1 : this->menuWidget->tabCount() - 1;
         this->menuWidget->setCurrentIndex(nextIdx);
     }
-    // TODO arrow keys
-    else if (this->tabBar->currentIndex() != 1 &&
-               (event->key() == Qt::Key_Up
-                || event->key() == Qt::Key_Down
-                || event->key() == Qt::Key_Left
-                || event->key() == Qt::Key_Right
-                || event->key() == Qt::Key_Return
-                || event->key() == Qt::Key_Enter))
+    else if (this->tabBar->currentIndex() != 1 && IS_ARROW_OR_RETURN(event->key()))
     {
+        // Return or an Arrow was hit in the menu tab
         emit keyPressedInMenu(event);
     }
-    else if (this->tabBar->currentIndex() == 1 &&
-               (event->key() == Qt::Key_Up
-                || event->key() == Qt::Key_Down
-                || event->key() == Qt::Key_Left
-                || event->key() == Qt::Key_Right
-                || event->key() == Qt::Key_Return
-                || event->key() == Qt::Key_Enter))
+    else if (this->tabBar->currentIndex() == 1 && IS_ARROW_OR_RETURN(event->key()))
     {
+        // Return or an Arrow was hit in the search tab
         emit keyPressedInSearch(event);
     }
-    // Show the search area
     else if (this->tabBar->currentIndex() != 1
             && event->key() != Qt::Key_Control
             && event->key() != Qt::Key_Shift
@@ -148,24 +143,27 @@ void TakeoffWidget::keyPressEvent(QKeyEvent *event)
             && event->key() != Qt::Key_Meta
             && event->key() != Qt::Key_Escape)
     {
+        // Show the search area
         this->searchWidget->clearSearchText();
         this->searchWidget->addSearchText(event);
         this->tabBar->setCurrentIndex(1);
     }
-    // Show the menu area
     else if (this->tabBar->currentIndex() == 1
-             && event->key() == Qt::Key_Escape) {
+             && event->key() == Qt::Key_Escape)
+    {
+        // Show the menu area
         this->tabBar->setCurrentIndex(0);
 
-    // Add text to the search box
     }
     else if (event->key() == Qt::Key_Escape)
     {
-        kDebug() << "Esc";
+        // The applet must be hidden when Escaped is pressed in the menu tab
         emit hideWindow();
         return;
     }
-    else {
+    else
+    {
+        // Add text to the search box
         this->searchWidget->addSearchText(event);
     }
 

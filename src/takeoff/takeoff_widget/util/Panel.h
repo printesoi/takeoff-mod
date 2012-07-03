@@ -77,6 +77,10 @@ public:
      */
     bool isFull() const;
 
+    /**
+      * Handle Enter/Return and Arrow keys
+      * @param event Keyboard event
+      */
     void keyPressed(QKeyEvent* event);
 
 signals:
@@ -96,9 +100,6 @@ signals:
      */
     void removedFromFavorites() const;
 
-
-//    virtual void hoverEnterEvent(QGraphicsSceneHoverEvent* event);
-
 private:
 
     /// Layout to add the different Launchers.
@@ -113,17 +114,17 @@ private:
     /// List with all the launchers that contains the panel.
     QList<Takeoff::Launcher*> launchers;
 
+    /// Hover indicator to highlight thethe  focused item
     Plasma::ItemBackground* m_hoverIndicator;
 
-    // For the focus;
-
+    /// True if the panel has an item focused
     bool focused;
 
+    /// The column of current focused item, -1 if none
     int colFocused;
 
+    /// The row of current focused item, -1 if none
     int rowFocused;
-
-    friend class PanelArea;
 
 };
 

@@ -89,10 +89,17 @@ public:
       */
     int tabCount() const;
 
+    /**
+      * The index of the current visible tab
+      */
     int currentIndex() const;
 
 public slots:
 
+    /**
+      * Handle Enter/Return and arrow keys
+      * @param event Keyboard event
+      */
     void keyPressed(QKeyEvent* event);
 
 signals:
@@ -112,6 +119,9 @@ signals:
      */
     void removedFromFavorites() const;
 
+    /**
+      * Signal that is emitted when Enter/Return or an arrow key is pressed
+      */
     void signalArrowPressed(QKeyEvent* event);
 
 private:

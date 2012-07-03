@@ -77,6 +77,10 @@ signals:
 
 public slots:
 
+    /**
+      * Handle Return/Enter or Arrow keys
+      * @param event The keyboard event
+      */
     void slotArrowPressed(QKeyEvent* event);
 
 private:

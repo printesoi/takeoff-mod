@@ -131,23 +131,6 @@ void Panel::removeAllLaunchers()
     this->launchers.clear();
 }
 
-// ************************************************************************** //
-// **********                      GET/SET/IS                      ********** //
-// ************************************************************************** //
-
-Takeoff::Launcher *Panel::getLauncher(int index) const
-{
-    if (this->launchers.length() == 0)
-        return NULL;
-    else
-        return this->launchers.at(index);
-}
-
-bool Panel::isFull() const
-{
-    return this->launchers.length() >= this->numColumns * this->numRows;
-}
-
 void Panel::keyPressed(QKeyEvent *event)
 {
     if (focused && (event->key() == Qt::Key_Enter || event->key() == Qt::Key_Return))
@@ -185,4 +168,21 @@ void Panel::keyPressed(QKeyEvent *event)
         idx = idx >= launchers.size() ? launchers.size() - 1 : idx;
         m_hoverIndicator->setTargetItem(launchers.at(idx));
     }
+}
+
+// ************************************************************************** //
+// **********                      GET/SET/IS                      ********** //
+// ************************************************************************** //
+
+Takeoff::Launcher *Panel::getLauncher(int index) const
+{
+    if (this->launchers.length() == 0)
+        return NULL;
+    else
+        return this->launchers.at(index);
+}
+
+bool Panel::isFull() const
+{
+    return this->launchers.length() >= this->numColumns * this->numRows;
 }

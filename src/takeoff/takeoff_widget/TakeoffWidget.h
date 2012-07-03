@@ -113,10 +113,21 @@ signals:
      */
     void addedToFavorites() const;
 
+    /**
+      * Signal that is emitted when a arrow key or the return is hit in the
+      * menu tab
+      */
     void keyPressedInMenu(QKeyEvent* event);
 
+    /**
+      * Signal that is emitted when a arrow key or the return is hit in the
+      * search tab
+      */
     void keyPressedInSearch(QKeyEvent* event);
 
+    /**
+      * Signal that is emitted when the applet must be hidden
+      */
     void hideWindow();
 
 private slots:
