@@ -1,0 +1,132 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://code.google.com/p/takeoff-launcher/issues/"
+"list\n"
+"POT-Creation-Date: 2011-08-27 04:11+0200\n"
+"PO-Revision-Date: 2011-08-27 03:06+0200\n"
+"Last-Translator: Osman Karagöz <osmank3@gmail.com>\n"
+"Language-Team: \n"
+"Language: Turkish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. i18n: file: src/takeoff/model/config/ConfigForm.ui:17
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: build/ui_ConfigForm.h:182 translations/rc.cpp:3 rc.cpp:3
+msgid "Icon"
+msgstr "Simge"
+
+#. i18n: file: src/takeoff/model/config/ConfigForm.ui:49
+#. i18n: ectx: property (text), widget (QCheckBox, showFavorites)
+#: build/ui_ConfigForm.h:184 translations/rc.cpp:6 rc.cpp:6
+msgid "Show \"Favorites\" category"
+msgstr "\"Yer İmleri\" kategorisini göster"
+
+#. i18n: file: src/takeoff/model/config/ConfigForm.ui:56
+#. i18n: ectx: property (text), widget (QCheckBox, showAllApplications)
+#: build/ui_ConfigForm.h:185 translations/rc.cpp:9 rc.cpp:9
+msgid "Show \"All Applications\" category"
+msgstr "\"Bütün Uygulamalar\" kategorisini göster"
+
+#. i18n: file: src/takeoff/model/config/ConfigForm.ui:63
+#. i18n: ectx: property (text), widget (QCheckBox, showXdgMenu)
+#: build/ui_ConfigForm.h:186 translations/rc.cpp:12 rc.cpp:12
+msgid "Show standard menu"
+msgstr "Normal menüyü göster"
+
+#. i18n: file: src/takeoff/model/config/ConfigForm.ui:70
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: build/ui_ConfigForm.h:187 translations/rc.cpp:15 rc.cpp:15
+msgid "Launcher size"
+msgstr "Başlatıcı büyüklüğü"
+
+#. i18n: file: src/takeoff/model/config/ConfigForm.ui:90
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: build/ui_ConfigForm.h:188 translations/rc.cpp:18 rc.cpp:18
+msgid "Separation between launchers"
+msgstr "Başlatıcılar arası boşluk büyüklüğü"
+
+#. i18n: file: src/takeoff/model/config/ConfigForm.ui:110
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: build/ui_ConfigForm.h:189 translations/rc.cpp:21 rc.cpp:21
+msgid "Number of rows"
+msgstr "Satır sayısı"
+
+#. i18n: file: src/takeoff/model/config/ConfigForm.ui:127
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: build/ui_ConfigForm.h:190 translations/rc.cpp:24 rc.cpp:24
+msgid "Number of columns"
+msgstr "Sütun sayısı"
+
+#. i18n: file: src/takeoff/model/config/ConfigForm.ui:144
+#. i18n: ectx: property (text), widget (QCheckBox, showIconText)
+#: build/ui_ConfigForm.h:191 translations/rc.cpp:27 rc.cpp:27
+msgid "Show icon text"
+msgstr "Simge yazısı göster"
+
+#. i18n: file: src/takeoff/model/config/ConfigForm.ui:151
+#. i18n: ectx: property (text), widget (QCheckBox, fullScreen)
+#: build/ui_ConfigForm.h:192 translations/rc.cpp:30 rc.cpp:30
+msgid "Show Takeoff in full screen mode"
+msgstr "Takeoff'u tam ekran olarak göster"
+
+#. i18n: file: src/takeoff/model/config/ConfigForm.ui:158
+#. i18n: ectx: property (text), widget (QCheckBox, rememberLastTab)
+#: build/ui_ConfigForm.h:193 translations/rc.cpp:33 rc.cpp:33
+msgid "Remember last tab"
+msgstr "Son sekmeyi hatırla"
+
+#. i18n: file: src/takeoff/model/config/ConfigForm.ui:165
+#. i18n: ectx: property (text), widget (QCheckBox, showBackgroundImage)
+#: build/ui_ConfigForm.h:194 translations/rc.cpp:36 rc.cpp:36
+msgid "Show background image"
+msgstr "Arka plan resmini göster"
+
+#: src/takeoff/MainWindow.cpp:71
+msgid "Takeoff Launcher"
+msgstr "Takeoff Uygulama Başlatıcı"
+
+#: src/takeoff/MainWindow.cpp:72
+msgid "Launch your applications with elegance"
+msgstr "Zarifçe uygulamaları başlatın"
+
+#: src/takeoff/MainWindow.cpp:149
+msgid "General settings"
+msgstr "Genel Ayarlar"
+
+#: src/takeoff/MainWindow.cpp:158
+msgid "Edit applications..."
+msgstr "Uygulamaları düzenle..."
+
+#: src/takeoff/MainWindow.cpp:174
+msgid "Favorites"
+msgstr "Yer İmleri"
+
+#: src/takeoff/MainWindow.cpp:189
+msgid "All Applications"
+msgstr "Bütün Uygulamalar"
+
+#: src/takeoff/takeoff_widget/Launcher.cpp:126
+msgid "Remove from favorites"
+msgstr "Yer imlerinden sil"
+
+#: src/takeoff/takeoff_widget/Launcher.cpp:129
+msgid "Add to favorites"
+msgstr "Yer imlerine ekle"
+
+#: translations/rc.cpp:37 rc.cpp:37
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Osman Karagöz"
+
+#: translations/rc.cpp:38 rc.cpp:38
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "osmank3@gmail.com"

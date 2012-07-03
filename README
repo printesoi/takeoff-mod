@@ -1,0 +1,21 @@
+Install dependencies (the name will change between distros):
+
+    - build-essentials, base-devel or similar
+    - libqt4-dev
+    - kdelibs5-dev
+    - libplasma3
+
+To build:
+
+    $ mkdir build
+    $ cd build
+    $ cmake .. && make
+
+To install:
+
+    $ sudo make install
+
+To test:
+
+    $ kbuildsycoca4
+    $ plasmoidviewer takeoff

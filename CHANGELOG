@@ -1,0 +1,43 @@
+[+] Takeoff v1.0 (2011/08/30)
+    - Added support for show Takeoff in full screen mode or float mode
+    - Added support for add and remove favorites
+    - By default the size and the separation between icons is adjusted to the
+      screen size
+    - Added an option to add a background image (specially for user without
+      graphics acceleration)    
+    - Is possible edit the applications making right click in the panel icon
+    - Solved problems with the favorites text encoding
+    - Added a tooltip to the panel icon
+      
+    - Added the following translations:
+      Italian (Caig)
+      Polish (Marcin Sągol)
+      Turkish (Osman Karagöz)
+      Russian (Alexander Sorokin)
+      Greek (Neophytos Kolokotronis)
+
+[+] Takeoff v0.2: (2011/08/12)
+    - Added support for searches
+    - Added support for translations (credits to Manu Tortosa)
+    - Solved problems with some launchers (with %U, %c...) and added support for
+      elastic cursor on launch and similar effects.
+    - Added support for remember last tab or not
+    - Added a tooltip to show the complete name of the launchers that, for
+      space reason, can't show their complete name
+    - By default, uses the distro specified icon
+    - CMakeLists file performed (thanks antoniojars!!)
+    
+    - Added the following translations:
+      Spanish (José Expósito)
+      Catalá  (Manu Tortosa)
+      Galego  (Adrián Chaves Fernández "Gallaecio")
+      German  (Fabian B.)
+
+
+[+] Takeoff v0.1.5 (2011/08/01)
+    - Switched from QMake to CMake to solve the "Could not find requested
+      component:takeoff" problem in certain distros.
+    - Removed the libmagic dependence
+
+[+] Takeoff v0.1 (2011/07/29)
+    - Initial release
