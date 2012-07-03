@@ -10,4 +10,4 @@ cd build
 echo $1 | sudo -S make install
 kbuildsycoca4
 plasmoidviewer takeoff
- 
+

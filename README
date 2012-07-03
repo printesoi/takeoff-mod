@@ -5,6 +5,12 @@ Install dependencies (the name will change between distros):
     - kdelibs5-dev
     - libplasma3
 
+For archlinux following packages are needed:
+    - qt4
+    - kdebase-workspace
+    - automoc4
+    - cmake
+
 To build:
 
     $ mkdir build
@@ -19,3 +25,17 @@ To test:
 
     $ kbuildsycoca4
     $ plasmoidviewer takeoff
+
+Improvements:
+
+    - hitting ESC in menu tab wish hide the applet
+    - tabs can be changed using CTRL+TAB(forward) and CTRL+SHIFT+TAB(backward)
+    - you can navigate between items in menu tab and in search tab using arrow
+      keys. The focused item will be higlighted
+
+TODO:
+    - you cannot switch between numbered tabs of the same category
+    - when switching tabs the focused item is remembered(it should lose focus)
+
+The original author is José Expósito <jose.exposito89@gmail.com>
+These improvements made by Victor Dodon <dodonvictor@gmail.com>
