@@ -88,6 +88,8 @@ signals:
      */
     void removedFromFavorites() const;
 
+    void hideWindow();
+
 private:
 
     /// Button to go to the menu area.

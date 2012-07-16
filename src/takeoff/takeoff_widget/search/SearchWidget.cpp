@@ -128,4 +128,6 @@ void SearchWidget::clearSearchText()
 void SearchWidget::keyPressed(QKeyEvent *event)
 {
     this->resultsPanel->keyPressed(event);
+    if (event->key() == Qt::Key_Return || event->key() == Qt::Key_Enter)
+        emit hideWindow();
 }

@@ -93,6 +93,7 @@ void TakeoffWidget::reset()
             this, SLOT(reloadFavorites()));
     connect(this, SIGNAL(keyPressedInSearch(QKeyEvent*)),
             this->searchWidget, SLOT(keyPressed(QKeyEvent*)));
+    connect(this->searchWidget, SIGNAL(hideWindow()), this, SIGNAL(hideWindow()));
 
     // Never show the tabBar bar
     this->tabBar->setTabBarShown(false);
